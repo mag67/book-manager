@@ -23,7 +23,7 @@ default: &default
 
 development:
   <<: *default
-  database: book_manager_development
+  database: bookan_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -57,7 +57,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: book_manager_test
+  database: bookan_test
   username: <%= ENV.fetch("POSTGRES_USER") %>
   password: <%= ENV.fetch("POSTGRES_PASSWORD") %>
   host: <%= ENV.fetch("POSTGRES_HOST") %>
@@ -85,6 +85,6 @@ test:
 #
 production:
   <<: *default
-  database: book_manager_production
+  database: bookan_production
   username: app
   password: <%= ENV["APP_DATABASE_PASSWORD"] %>

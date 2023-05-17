@@ -16,7 +16,7 @@ services:
     hostname: postgres
 
   api:
-    image: book-manager-backend:v1
+    image: bookan-backend:v1
     command: sh -c "rm -f tmp/pids/server.pid && rails s -p 3000 -b '0.0.0.0'"
     environment:
       POSTGRES_USER: postgres
